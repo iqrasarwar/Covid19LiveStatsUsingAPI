@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>JQuery</title>
+   <script src="jquery-3.6.0.min.js"></script>
+</head>
+<body>
+   <h1>JQuery SlideToggler</h1>
+   <div class="container">
+      <div class="toggler">
+         Click Me To toggle the Text!
+      </div>
+      <div class="toggled">
+         Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium nihil accusantium nam, eligendi sit repellendus dolorum rerum omnis minima velit ducimus eveniet, vitae error hic voluptatibus voluptate dolorem sed excepturi?
+         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Suscipit nobis, minus amet iusto aliquam error optio voluptatibus in quo modi. Ullam maiores error fugit temporibus itaque porro excepturi beatae placeat!
+         Neque, quo minima aperiam ea tenetur cum laboriosam reiciendis cupiditate ad odit placeat qui, eos nesciunt, illo beatae commodi perspiciatis. Doloremque, corrupti earum magni ipsum nam rem facilis dolorem voluptate.
+         Ex ab doloremque iusto sequi architecto! Ducimus, nemo culpa dolor ab eveniet nihil, sed necessitatibus laboriosam, sapiente praesentium sint magnam architecto? Recusandae cum accusamus quisquam minima temporibus et, nesciunt neque.
+      </div>
+   </div>
+   <h1>JQuery Animation</h1>
+   <div class="hideSeek">
+      Let's play !
+   </div>
+   <button>Start</button>
+   <script>
+      $(document).ready(function(){
+         $('.toggler').click(function(){
+            $('.toggled').slideToggle();
+         });
+         $('.toggler,.toggled').css({
+            "backgroundColor":"lightblue",
+            "fontFamily":"serif",
+            "borderColor":"red",
+            "borderWidth":"1px",
+            "borderStyle":"solid",
+            "textAlign":"center"
+         });
+         $('h1').css({
+            "color":"red",
+            "fontFamily":"serif",
+            "textAlign":"center"
+         });
+         $('button').css(
+            {
+               "backgroundColor":"blue",
+               "color":"white",
+               "padding":"10px",
+               "margin":"3% 48%"
+         });
+         $('.hideSeek').css({
+            "backgroundColor":"lightblue",
+            "fontFamily":"serif",
+            "borderColor":"red",
+            "borderWidth":"1px",
+            "borderStyle":"solid",
+            "textAlign":"center"
+         });
+         $('button').click(function(){
+            $('.hideSeek').animate({
+               "opacity" :"0.5",
+              "fontSize": '3em',
+            },"slow").animate({
+               "opacity" :"1",
+               "fontSize": '1em'
+            });
+         });
+      });
+   </script>
+</body>
+</html>
