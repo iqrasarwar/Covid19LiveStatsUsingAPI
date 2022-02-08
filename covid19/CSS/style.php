@@ -1,4 +1,4 @@
-
+<style type="text/css">
 .nav-link, .navbar-brand
 {
     color:red !important;
@@ -7,8 +7,8 @@
 }
 #virusImg
 {
-    width: 40px !important;
-    height: 40px !important;
+    width: 70px !important;
+    height: 70px !important;
     animation: rotation 2s infinite linear;
 }
 #humman
@@ -27,9 +27,20 @@
   }
   @keyframes stretch {
     0% {
-      transform: scale(.3);
+      transform: scale(0.7);
     }
     100% {
-      transform: scale(1.5);
+      transform: scale(0.9);
     }
   }
+.dd{
+  flex-direction:column;
+}
+.redHead{
+  color:red;
+}
+ .imgg img{
+   width:90%;
+   height:50%;
+ }
+</style>
