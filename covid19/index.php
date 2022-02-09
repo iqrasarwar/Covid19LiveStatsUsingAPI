@@ -98,6 +98,28 @@
       </div>
     </div>
   </div>
+<div class="symptoms row">
+  <div class="col-12 text-center redHead">
+    <h2>Covid-19 Symptoms</h2>
+  </div>
+  <div class="col-12 d-flex flex-wrap text-center justify-content-center align-items-center">
+    <div class="col-4">
+      <p>fever</p>
+      <img src="media/fever.jpg" alt="fever">
+    </div>
+    <div class="col-4">
+      <p>cough</p>
+      <img src="media/cough.jpg" alt="cough">
+    </div>
+    <div class="col-4">
+      <p>tiredness</p>
+      <img src="media/tire.jfif" alt="tirdeness">
+    </div>
+    <div class="col-4">
+      <p>loss of taste or smell</p>
+      <img src="media/lossoftaste.jfif" alt="Loss of taste">
+    </div>
+  </div>
 
 </body>
 </html>
