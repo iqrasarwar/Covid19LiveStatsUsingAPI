@@ -58,8 +58,8 @@ font-weight:bold;
  }
 
  .prevent img{
-   width:600px;
-   height:300px;
+   width:60%;
+   height:80%;
    border:1px solid red;
    border-radius:5px;
  }
@@ -89,5 +89,19 @@ padding-bottom:10px;
  }
  .last{
    padding:0px !important;
+ }
+ .fa-solid{
+   position:fixed;
+   right:5px;
+   bottom:5px;
+   color:red !important;
+   background-color:black;
+   padding:5px;
+   border-radius:5px;
+ }
+ th,nav{
+   color:red;
+   background-color:black;
+   font-weight:bold;
  }
 </style>
