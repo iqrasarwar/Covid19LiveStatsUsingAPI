@@ -8,9 +8,9 @@
     <?php include 'css/style.php';?>
     <title>Covid19</title>
 </head>
-<body>
+<body onload="fetchAPIData()">
   <div class="outer">
-      <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+      <nav class="navbar navbar-expand-lg navbar-dark" id="up">
         <a class="navbar-brand pl-5" href="#">Covid19 Live Updates</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -19,6 +19,9 @@
           <ul class="navbar-nav ml-auto">
             <li class="nav-item active">
               <a class="nav-link" href="#stats">Live Stats<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#sympt">Symptoms</a>
@@ -45,39 +48,46 @@
       </div>
       <div class="row w-100 mb-5" id ="stats">
         <div class="col-12 text-center redHead">
-          <h2>Covid-19 Update</h2>
+          <h2>Covid-19 Live Statics</h2>
         </div>
-        <div class="col-12 d-flex justify-content-center align-items-center text-center">
-          <div class="col-3">
-            <h3 class="count" data-stop="242699">
-            242699
-            </h3>
+        <div class="col-12">
+        <table class="table  table-striped table-bordered table-hover table-responsive-lg">
+          <thead>
+            <th>Country</th>
+            <th>Code</th>
+            <th>TotalConfirmed</th>
+            <th>NewConfirmed</th>
+            <th>TotalDeaths</th>
+            <th>NewDeaths</th>
+            <th>TotalRecovered</th>
+            <th>NewRecovered</th>
+          </thead>
+          <tbody id="tab"></tbody>
+        </table>
+        </div>
+        <div class="col-12 d-flex flex-wrap justify-content-center align-items-center text-center">
+          <div class="col-12 col-md-6 col-sm-12 col-lg-3">
+            <h3 class="count" id="confiremd" ></h3>
             <p>
-            Active Cases in World
+            Total Confirmed in World
             </p>
           </div>
-          <div class="col-3">
-          <h3 class="count" data-stop="934467">
-          934467
-          </h3>
+          <div class="col-12 col-md-6 col-sm-12 col-lg-3">
+          <h3 class="count"></h3>
           <p>
-          Active cases in Pakistan
+          Total Deaths in Worlds
           </p>
           </div>
-          <div class="col-3">
-          <h3 class="count" data-stop="320752">
-          320752
-          </h3>
+          <div class="col-12 col-md-6 col-sm-12 col-lg-3">
+          <h3 class="count"></h3>
           <p>
-          Total deaths in world
+          Total Recovered in World
           </p>
           </div>
-          <div class="col-3">
-          <h3 class="count" data-stop="659235">
-          659235
-          </h3>
+          <div class="col-12 col-md-6 col-sm-12 col-lg-3">
+          <h3 class="count"></h3>
           <p>
-          Recovered Cases
+          New Cases over the Globe
           </p>
           </div>
         </div>
@@ -87,11 +97,11 @@
           <h2>
           About Covid-19</h2>
         </div>
-        <div class="desc d-flex justify-content-center align-items-center">
-          <div class="col-5 imgg">
+        <div class="desc col-12 d-lg-flex justify-content-center align-items-center">
+          <div class="col-12 col-lg-6 col-md-12 col-sm-12 imgg">
             <img src="media/covid.jfif" alt="covid image">
           </div>
-          <div class="col-5">
+          <div class="col-12 col-lg-6 col-md-12 col-sm-12">
             <p>
             COVID-19 is a virus that can cause mild to severe respiratory illness, including death. The best preventive measures include getting vaccinated, wearing a mask, staying 6 feet apart, washing hands often and avoiding sick people.
             Coronaviruses are a family of viruses that can cause respiratory illness in humans. They are called “corona” because of crown-like spikes on the surface of the virus. Severe acute respiratory syndrome (SARS), Middle East respiratory syndrome (MERS) and the common cold are examples of coronaviruses that cause illness in humans.
@@ -103,20 +113,20 @@
         <div class="col-12 text-center redHead">
           <h2>Covid-19 Symptoms</h2>
         </div>
-        <div class="col-12 d-flex flex-wrap text-center justify-content-center align-items-center">
-          <div class="col-4">
+        <div class="col-12 d-lg-flex d-md-flex flex-wrap text-center justify-content-center align-items-center">
+          <div class="col-12 col-lg-4 col-md-6 col-sm-12">
             <p>fever</p>
             <img src="media/fever.jpg" alt="fever">
           </div>
-          <div class="col-4">
+          <div class="col-12 col-lg-4 col-md-6 col-sm-12">
             <p>cough</p>
             <img src="media/cough.jpg" alt="cough">
           </div>
-          <div class="col-4">
+          <div class="col-12 col-lg-4 col-md-6 col-sm-12">
             <p>tiredness</p>
             <img src="media/tire.jfif" alt="tirdeness">
           </div>
-          <div class="col-4">
+          <div class="col-12 col-lg-4 col-md-6 col-sm-12">
             <p>loss of taste or smell</p>
             <img src="media/lossoftaste.jfif" alt="Loss of taste">
           </div>
@@ -127,7 +137,7 @@
           <h2>COIVD-19 PREVENTIONS</h2>
         </div>
         <div class="col-12 preventImg">
-          <div class="col-10 d-flex flex-wrap flex-row align-items-center m-auto pt-1">
+          <div class="col-10 d-lg-flex d-md-flex flex-wrap flex-row align-items-center m-auto pt-1">
             <img src="media/mask.jfif" alt="wear mask" >
             <p class="ml-5">
               Protect yourself and others from COVID-19, wear the most protective mask you can, that fits well and that you will wear consistently.
@@ -264,18 +274,21 @@
           <!-- Copyright -->
         </footer>
       </div>
+
   </div>
+  <div class="button">
+      <a href="#up"><i class="fa-solid fa-up-long"></i></a>
+      </div>
 <script>
-    $('.count').each(function () {
+  $('.count').each(function () {
   var $this = $(this);
   jQuery({ Counter: 0 }).animate({ Counter: $this.attr('data-stop') }, {
     duration: 1000,
     easing: 'swing',
     step: function (now) {
-      $this.text(Math.ceil(now));
-    }
-  });
-});
+      $this.text(Math.ceil(now)); }}); });
 </script>
+
+<script src="script.js"></script>
 </body>
 </html>
