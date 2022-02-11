@@ -6,16 +6,14 @@ Site is hosted at https://covidlivestats.000webhostapp.com/
 The API used for fetching data is https://api.covid19api.com/summary
 ## USING
 This website is made using
-__
 * HTML
 * CSS
 * JQUERY
 * BOOTSTRAP
-*JS
-__
+* JS
 ## Descrption
--index.php contains the HTML layout and a bit of JS.
--links.php contains the cdn links used.
--script.js fetch and display data using JS.
--style.php in css folder contains the basic styling applied via CSS.
+- index.php contains the HTML layout and a bit of JS.
+- links.php contains the cdn links used.
+- script.js fetch and display data using JS.
+- style.php in css folder contains the basic styling applied via CSS.
 
