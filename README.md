@@ -14,6 +14,6 @@ This website is made using
 ## Descrption
 - index.php contains the HTML layout and a bit of JS.
 - links.php contains the cdn links used.
-- script.js fetch and display data using JS.
+- script.js fetch and display data using JQuery.
 - style.php in css folder contains the basic styling applied via CSS.
 
